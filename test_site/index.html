@@ -40,6 +40,25 @@
       .mgt8 {
         margin-top: 8px;
       }
+      /* 当屏幕宽度小于600px时要改变css */
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJuQu {
+          flex-direction: column;
+        }
+        .youQu {
+          margin-left: 8px;
+        }
+        .shuJu {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
     </style>
   </head>
   <body class="flex">
@@ -59,16 +78,25 @@
       <!-- 头部栏 -->
       <div style="height: 60px; z-index: 1" class="baiSe yinYing"></div>
       <!-- 内容区 -->
-      <div style="overflow: auto" class="flex1 flex">
+      <div style="overflow: auto" class="flex1 flex neiRong">
         <!-- 内容左区 -->
         <div style="flex: 3" class="flex column mg8">
           <!-- 数据区 -->
-          <div class="flex">
+          <div class="flex shuJuQu">
             <!-- 数据块 -->
-            <div style="height: 100px" class="flex1 baiSe yinYing mgr8"></div>
-            <div style="height: 100px" class="flex1 baiSe yinYing mgr8"></div>
-            <div style="height: 100px" class="flex1 baiSe yinYing mgr8"></div>
-            <div style="height: 100px" class="flex1 baiSe yinYing"></div>
+            <div
+              style="height: 100px"
+              class="flex1 baiSe yinYing mgr8 shuJu"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 baiSe yinYing mgr8 shuJu"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 baiSe yinYing mgr8 shuJu"
+            ></div>
+            <div style="height: 100px" class="flex1 baiSe yinYing shuJu"></div>
           </div>
           <!-- 列表区 -->
           <div class="flex column">
@@ -98,7 +126,7 @@
           </div>
         </div>
         <!-- 内容右区 -->
-        <div style="flex: 1" class="flex column mgr8 mgt8">
+        <div style="flex: 1" class="flex column mgr8 mgt8 youQu">
           <!-- 提示区 -->
           <div style="height: 150px" class="baiSe yinYing">
             <p>公告区</p>
